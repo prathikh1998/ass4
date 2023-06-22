@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Query</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Data Query</h1>
+    <form id="query-form">
+        <label for="attribute">Select Attribute:</label>
+        <select id="attribute" name="attribute">
+            <option value="magnitude">Magnitude</option>
+            <option value="depth">Depth</option>
+            <!-- Add more options based on your dataset's attributes -->
+        </select><br><br>
+
+        <label for="min-interval">Min Interval:</label>
+        <input type="number" id="min-interval" name="min-interval" placeholder="Enter min interval"><br><br>
+
+        <label for="max-interval">Max Interval:</label>
+        <input type="number" id="max-interval" name="max-interval" placeholder="Enter max interval"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="chart-container"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
